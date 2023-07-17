@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  /* cores */
+  --tomato: hsl(4, 100%, 67%);
+  --white: white;
+  --grey: hsl(231, 7%, 60%);
+  --dark: hsl(234, 29%, 20%);
+  --charcoal: hsl(235, 18%, 26%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: var(--charcoal);
+  font-size: 16px;
+}
+
+/* Classes reutilizáveis ---------------------*/
+input[type="submit"],
+button {
+  padding: 18px;
+  border: none;
+  color: var(--white);
+  background-color: var(--dark);
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--tomato);
+
+    box-shadow: 5px 5px 10px var(--tomato);
+  }
+}
+
+.error {
+  outline: 0.5px solid red !important;
+  background-color: rgb(253, 204, 204);
+}
+
+.line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  & span {
+    font-size: 13px;
+  }
+}
+/* ------------------------------------ */
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxElements {
+  background-color: var(--white);
+  width: 60rem;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.481);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  width: 50%;
+  display: flex;
+  justify-content: right;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-left: 50px;
+
+  & h1 {
+    font-size: 40px;
+    color: var(--dark);
+  }
+
+  & ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  & li {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  & .input {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & label {
+      font-size: 13px;
+    }
+
+    & input {
+      padding: 16px;
+      border-radius: 10px;
+      border: none;
+      outline: 0.5px solid var(--grey);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.boxThanks {
+  background-color: var(--white);
+  width: 29rem;
+  border-radius: 24px;
+  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.481);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 50px;
+
+  & img {
+    width: 40px;
+  }
+
+  & h1 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  & p {
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 972px) {
+  .boxElements {
+    width: 100%;
+    height: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0px;
+    padding: 0;
+    justify-content: flex-end;
+  }
+
+  .left,
+  .img {
+    width: 100%;
+  }
+
+  .img {
+    height: 40%;
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .formulario {
+    margin: 0;
+    padding: 0px 50px;
+    margin-top: 40px;
+
+    & h1 {
+      font-size: 45px;
+    }
+
+    & li,
+    & p {
+      font-size: 18px;
+    }
+
+    & label {
+      font-weight: 700;
+    }
+
+    & input[type="submit"] {
+      font-size: 18px;
+      padding: 22px;
+    }
+  }
+
+  .boxThanks{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    position: relative;
+
+    justify-content: center;
+    gap: 30px;
+
+    & img{
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    & h1{
+      font-size: 50px;
+    }
+
+    & p, & strong{
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    & button {
+      font-size: 18px;
+      padding: 22px;
+      position: relative;
+      top: 170px;
+    }
+
+  }
+
+
+}
