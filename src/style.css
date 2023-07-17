@@ -38,7 +38,7 @@ button {
 }
 
 .error {
-  outline: 0.5px solid red !important;
+  border: 1px solid red !important;
   background-color: rgb(253, 204, 204);
 }
 
@@ -93,7 +93,7 @@ button {
   margin-left: 50px;
 
   & h1 {
-    font-size: 40px;
+    font-size: 50px;
     color: var(--dark);
   }
 
@@ -123,8 +123,7 @@ button {
     & input {
       padding: 16px;
       border-radius: 10px;
-      border: none;
-      outline: 0.5px solid var(--grey);
+      border: 1px solid var(--grey);
       cursor: pointer;
       transition: all 0.3s ease;
     }
@@ -156,7 +155,6 @@ button {
 }
 
 @media screen and (max-width: 972px) {
-
   .boxElements {
     width: 100vw;
     height: 100%;
@@ -173,9 +171,9 @@ button {
     width: 100%;
   }
 
-    .left{
-      padding: auto;
-    }
+  .left {
+    padding: auto;
+  }
 
   .img {
     height: 50%;
@@ -188,7 +186,7 @@ button {
   }
 
   .formulario {
-    margin: 40px 30px 0px; 
+    margin: 40px 30px 0px;
 
     & h1 {
       font-size: 45px;
@@ -209,25 +207,26 @@ button {
     }
   }
 
-  .boxThanks{
-    width: 100%;
-    height: 100%;
+  .boxThanks {
+    width: 100vw;
+    height: 100vh;
     border-radius: 0px;
-    position: relative;
+    box-shadow: 0px 0px;
 
     justify-content: center;
     gap: 30px;
 
-    & img{
+    & img {
       width: 100px;
       margin-bottom: 20px;
     }
 
-    & h1{
+    & h1 {
       font-size: 50px;
     }
 
-    & p, & strong{
+    & p,
+    & strong {
       font-size: 20px;
       line-height: 30px;
     }
@@ -235,11 +234,6 @@ button {
     & button {
       font-size: 18px;
       padding: 22px;
-      position: relative;
-      top: 170px;
     }
-
   }
-
-
 }
